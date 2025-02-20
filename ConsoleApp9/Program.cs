@@ -24,7 +24,7 @@ namespace ConsoleApp9
            
 
             books.Add(new Book("wigni1", new Author("avtori1", "1900", "qveyana1"), 1900));
-            books.Add(new Book("To Kill a Mockingbird", new Author("Harper Lee", "1926", "USA"), 1960));
+            books.Add(new Book("wigni2", new Author("avtori2", "1800", "qveyana2"), 1800));
         
 
             while (true)
