@@ -16,7 +16,6 @@ namespace ATM
             int balanceOnHand = 200;
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string filePath = Path.Combine(desktopPath, "transaction.txt");
-            Console.WriteLine("Transactions will be logged to: " + filePath);
 
 
 
@@ -48,7 +47,7 @@ namespace ATM
                         {
                             balance += deposit;
                             balanceOnHand -= deposit;
-                            Console.WriteLine($"Balance now in bank account: {balance}");
+                            Console.WriteLine($"Balance in baank account {balance}");
                             LogTransaction(filePath, $"Deposited {deposit}");
                         }
                         break;
@@ -64,8 +63,8 @@ namespace ATM
                         {
                             balance -= withdraw;
                             balanceOnHand += withdraw;
-                            Console.WriteLine($"Balance now in bank account: {balance}");
-                            LogTransaction(filePath, $"Withdraw {withdraw}");
+                            Console.WriteLine($"Balance in bank account {balance}");
+                            LogTransaction(filePath, $"Withdrawed {withdraw}");
                         }
 
                         break;
@@ -80,8 +79,7 @@ namespace ATM
       //  ვლოგავთ შედეგებს ფაილში
             static void LogTransaction(string filePath, string transaction)
         {
-            string logEntry = $"{DateTime.Now}: {transaction}";
-            Console.WriteLine($"Logging transaction: {logEntry}");
+            string logEntry = $"{DateTime.Now}  {transaction}";
 
             File.AppendAllText(filePath, logEntry + Environment.NewLine);
 
